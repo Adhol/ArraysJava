@@ -1,5 +1,7 @@
 package arrays.task14;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Task14 {
@@ -13,35 +15,23 @@ public class Task14 {
 
             int arrayLength = in.nextInt();
 
-            int[] arr = new int[arrayLength];
+            Integer[] arr = new Integer[arrayLength];
 
-            int countOne;
-            int countZero;
-            int whileCount = 0;
-
-            do {
-                countOne = 0;
-                countZero = 0;
-                for (int i = 0; i < arrayLength; i++) {
-                    int r = (int) Math.round(Math.random());
-                    arr[i] = r;
-                    if (arr[i] == 0) {
-                        countZero++;
-                    } else {
-                        countOne++;
-                    }
-                }
-                whileCount++;
-            } while (countOne < countZero);
-
-
-            for(int n : arr) {
-                System.out.println(n);
+            for (int i = 0; i < (arrayLength / 2) + 1; i++) {
+                arr[i] = 1;
             }
 
-            System.out.println("Zero " + countZero);
-            System.out.println("One " + countOne);
-            System.out.println("whileCount " + whileCount);
+
+            Collections.shuffle(Arrays.asList(arr));
+
+            for (int i = 0; i < arrayLength; i++) {
+                if(arr[i] == null) {
+                    arr[i] = 0;
+                }
+                System.out.println(arr[i]);
+            }
+
+
 
         } catch (java.util.InputMismatchException e) {
             System.out.println("Not correct array length");

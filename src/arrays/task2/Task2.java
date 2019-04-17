@@ -1,3 +1,7 @@
+/**
+ * Заполнить массив нулями и единицами, при этом данные значения чередуются, начиная с нуля.
+ */
+
 package arrays.task2;
 
 import java.util.Scanner;
@@ -13,12 +17,8 @@ public class Task2 {
 
             int[] arr = new int[arrayLength];
 
-            for (int i = 0; i < arr.length; i++) {
-                if (i % 2 == 0) {
-                    arr[i] = 0;
-                } else {
-                    arr[i] = 1;
-                }
+            for (int i = 1; i < arr.length; i+=2) {
+                arr[i] = 1;
             }
             for (int n : arr) {
                 System.out.print(n);

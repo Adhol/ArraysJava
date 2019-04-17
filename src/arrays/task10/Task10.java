@@ -1,3 +1,8 @@
+/**
+ * Создать массив, на четных местах в котором стоят единицы, а на нечетных местах - числа,
+ * равные остатку от деления своего номера на 5.
+ */
+
 package arrays.task10;
 
 import java.util.Scanner;
@@ -13,11 +18,7 @@ public class Task10 {
             int[] arr = new int[arrayLength];
 
             for (int i = 0; i < arr.length; i++) {
-                if (i % 2 == 0) {
-                    arr[i] = 1;
-                } else {
-                    arr[i] = i % 5;
-                }
+                arr[i] = i % 2 == 0 ? 1 : i % 5;
             }
             for(int n : arr) {
                 System.out.println(n);

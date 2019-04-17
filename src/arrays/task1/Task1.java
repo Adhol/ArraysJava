@@ -1,3 +1,7 @@
+/**
+ * Заполнить массив нулям, кроме первого и последнего элементов, которые должны быть равны единице.
+ */
+
 package arrays.task1;
 
 import java.util.Scanner;
@@ -13,15 +17,9 @@ public class Task1 {
 
             int[] arr = new int[arrayLength];
 
-            for (int i = 0; i < arr.length; i++) {
-                if (i == 0) {
-                    arr[i] = 1;
-                } else if (i == arr.length - 1) {
-                    arr[i] = 1;
-                } else {
-                    arr[i] = 0;
-                }
-            }
+            arr[0] = 1;
+            arr[arrayLength - 1] = 1;
+
             for (int n : arr) {
                 System.out.print(n);
             }

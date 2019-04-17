@@ -1,3 +1,7 @@
+/**
+ * Заполнить массив заданной длины различными простыми числами.
+ */
+
 package arrays.task8;
 
 import java.util.Scanner;
@@ -28,14 +32,9 @@ public class Task8 {
 
             int n = 2;
 
-            for (int i = 0; i < arr.length;) {
-                if (isPrime(n)) {
-                    arr[i] = n;
-                    n++;
-                    i++;
-                } else {
-                    n++;
-                }
+            for (int i = 0; i < arr.length; i++) {
+                arr[i] = isPrime(n) ? n : i--;
+                n++;
             }
 
             for(int m : arr) {

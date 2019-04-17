@@ -1,3 +1,7 @@
+/**
+ * Сформировать возрастающий массив из четных чисел.
+ */
+
 package arrays.task5;
 
 import java.util.Scanner;

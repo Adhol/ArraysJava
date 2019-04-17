@@ -1,3 +1,7 @@
+/**
+ * Создать массив, который одинаково читается как слева направо, так и справа налево.
+ */
+
 package arrays.task12;
 
 import java.util.Scanner;
@@ -14,8 +18,8 @@ public class Task12 {
 
             int[] arr = new int[arrayLength];
 
-            for (int i = 0; i <= arrayLength - 2; i+=2) {
-                int r = (int) (Math.random() * 10);
+            for (int i = 0; i <= arrayLength / 2; i++) {
+                int r = (int) (1 + Math.random() * 9);
                 arr[i] = r;
                 arr[arr.length - 1 - i] = r;
             }

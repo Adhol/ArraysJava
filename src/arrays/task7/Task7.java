@@ -1,3 +1,7 @@
+/**
+ * Создать массив из n первых чисел Фибоначчи.
+ */
+
 package arrays.task7;
 
 import java.util.Scanner;

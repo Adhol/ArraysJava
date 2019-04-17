@@ -1,3 +1,7 @@
+/**
+ * Сформировать убывающий массив из чисел, которые делятся на 3.
+ */
+
 package arrays.task6;
 
 import java.util.Scanner;
